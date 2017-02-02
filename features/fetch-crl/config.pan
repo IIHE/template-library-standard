@@ -102,12 +102,12 @@ include 'components/altlogrotate/config';
 "/software/components/chkconfig/service" = {
   if (FETCH_CRL_VERSION >= '3.0') {
     # Run fetch-crl on boot
-    SELF[escape('fetch-crl-boot')] = dict("on", "",
+    SELF['fetch-crl-boot'] = dict("on", "",
                                           "startstop", true);
   };
 
   # Enable periodic fetch-crl (cron)
-  SELF[escape('fetch-crl-cron')] = dict("on", "",
+  SELF['fetch-crl-cron'] = dict("on", "",
                                         "startstop", true);
 
   SELF;
